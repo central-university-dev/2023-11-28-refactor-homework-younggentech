@@ -1,2 +1,23 @@
-def func(new_name, arg2):
-    print('{0}, arg{1}'.format(new_name, arg2))
+class B:
+    def __init__(self, test_val: int):
+        self.t = test_val
+
+    def test(self, expected: int) -> bool:
+        """
+        Test method.
+
+        :return:
+        """
+        return expected == self.t
+
+
+class C(B):
+    ...
+
+
+class D:
+    ...
+
+
+class E(D, B):
+    ...
